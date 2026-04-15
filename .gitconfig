@@ -1,0 +1,44 @@
+[branch]
+autosetuprebase = always
+[user]
+	name = Zack Sheppard
+	email = zack@zacksheppard.com
+[core]
+ignorecase = false
+editor = vim
+editor = code -w
+editor = cursor -w
+trustctime = false
+[color]
+diff = auto
+status = auto
+ui = true
+[branch "master"]
+rebase = true
+[branch "main"]
+rebase = true
+[branch "release"]
+rebase = true
+[push]
+default = upstream
+autoSetupRemote = true
+[color "branch"]
+current = cyan reverse bold
+local = green
+remote = yellow
+[init]
+defaultBranch = main
+[alias]
+co = checkout
+cp = cherry-pick
+[filter "lfs"]
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+[gpg]
+format = ssh
+[gpg "ssh"]
+program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+gpgsign = true
